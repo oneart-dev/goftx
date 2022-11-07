@@ -31,3 +31,17 @@ type Fill struct {
 	Time          FTXTime         `json:"time"`
 	Type          string          `json:"type"`
 }
+
+type GetFundingPaymentParams struct {
+	Market    *string `json:"future"`
+	StartTime *int64  `json:"start_time"`
+	EndTime   *int64  `json:"end_time"`
+}
+
+type FundingPayment struct {
+	Future  string  `json:"future"`
+	ID      int64   `json:"id"`
+	Payment float64 `json:"payment"`
+	Time    FTXTime `json:"time"`
+	Rate    float64 `json:"rate"`
+}
